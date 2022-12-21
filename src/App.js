@@ -9,18 +9,13 @@ import './App.css';
 const App = () => {
   const [show, setShow] = useState(false);
   const [images, setImages] = useState();
-  const [fastImages, setFastImages] = useState();
+  const [/*fastImages*/, setFastImages] = useState();
   const [image, setImage] = useState();
 
   useEffect(() => {
     getApiData('images?limit=10', 'timer1', setImages);
-  }, []);
-
-  useEffect(() => {
     getApiData('fast-loading?limit=10', 'timer2', setFastImages);
   }, []);
-
-  console.log(fastImages);
 
   return (
     <>
